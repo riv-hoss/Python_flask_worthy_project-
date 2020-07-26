@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <title>Embodied Energy Calculator</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon2.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Sailor - v2.0.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo"><a href="/">Worthy</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+
+        <ul>
+
+          <li class="drop-down"><a href="#">About</a>
+            <ul>
+              <li><a href="/">About Us</a></li>
+              <li><a href="/">Team</a></li>
+              <li><a href="/">Testimonials</a></li>
+
+              <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="active"><a href="/upload">Embodied Energy Calculator</a></li>
+          <li><a href="/scenario">Scenario Optimization</a></li>
+          <li><a href="/">Contact</a></li>
+
+        </ul>
+
+      </nav><!-- .nav-menu -->
+
+      <a href="/upload" class="get-started-btn ml-auto">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Embodied Energy Calculator</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Embodied Energy</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Upload Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="row">
+
+ <!--         <div class="col-lg-5 col-md-6 mt-4 mt-md-0">
+            <div class="box featured">
+              <h3>Raw Data</h3>
+              <h4><sup>Upload file here</sup></h4>
+              <ul>
+                <li>No more sheet</li>
+                <li>Fast calculation</li>
+                <li>Only Excel files</li>
+              </ul>
+              <div>
+                  <form action="/upload" method="POST" enctype=multipart/form-data>
+                      <input  type="file" name="file" /><br>
+
+                      
+                      <input  class="btn-buy btn-block" type="submit" /><br>
+                      
+                  </form>  
+                      <p>
+                        {{  message }}
+                      </p>
+                <div class="btn-wrap">
+                 {{ resg }}
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
+
+          <div class="col-lg-5 col-md-6 mt-4 mt-md-0">
+            <div class="box featured">
+              <h3>Raw Data</h3>
+              <h4><sup>Upload file here</sup></h4>
+              <ul>
+                <li>No more sheet</li>
+                <li>Fast calculation</li>
+                <li>Only Excel files</li>
+              </ul>
+              <div>
+                  <form action="/upload" method="POST" enctype=multipart/form-data>
+                      <div class="input-group">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04", name='file'>
+                          <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                        </div>
+                      <div class="input-group-append">
+                        <button class="btn-danger" type="submit" id="inputGroupFileAddon04">Calculate</button>
+                      </div>
+                    </div>
+
+                      
+                      
+                  </form>  
+                      <p>
+                        {{  message }}
+                      </p>
+                <div class="btn-wrap">
+                 {{ resg }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>F.A.Q</h2>
+          <p>Frequently Asked Questions</p>
+        </div>
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>How many files you have?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Our algorithm compute the embeded energy of your project, calculates NPV of the given annual energy, and finally provide you the best optimized scenario.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>How many files you have?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Our algorithm compute the embeded energy of your project, calculates NPV of the given annual energy, and finally provide you the best optimized scenario.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Worthy</h3>
+              <p>
+                Karlsplatz <br>
+                1, Vienna, Austria<br><br>
+                <strong>Phone:</strong> +1 514560<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Embodied Energy Calculation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Scenario Optimization</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to receive our latest news.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Worthy</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
